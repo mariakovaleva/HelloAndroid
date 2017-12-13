@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".MainActivity" >
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
         >
 
-    <FrameLayout
+        <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Frame"
+        android:id="@+id/frame"
         android:paddingTop="25dp"
+        android:paddingBottom="25dp"
         android:layout_alignParentTop="true"
         >
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#0288BC"
@@ -39,14 +48,13 @@
             />
     </FrameLayout>
 
-    <ImageView
-
+        <ImageView
         android:id="@+id/office"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@id/frame"
         android:scaleType="centerCrop"
         android:src="@drawable/office" />
 
@@ -56,25 +64,22 @@
         android:layout_alignBottom="@+id/office"
         android:layout_toLeftOf="@+id/office"
         android:layout_toStartOf="@+id/office"
-        android:layout_marginLeft="16dp"
-        android:fontFamily="@font/merriweather-light"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/frame"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/merriweatherlight"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="16sp"
+        android:textAlignment="center"
         android:text="@string/udacity_info" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/office"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/merriweather-bold"
-        android:paddingTop="16dp"
-        android:text="@string/more"
-        android:textSize="34sp"
-        android:textColor="#0288BC"
-        />
-    <ImageView
+        <ImageView
+        android:id="@+id/wave"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
@@ -83,15 +88,30 @@
         />
 
     <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wave"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:fontFamily="@font/merriweatherbold"
+        android:text="@string/more"
+        android:textColor="#0288BC"
+        android:textSize="24sp"
+        />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/slogan"
-        android:fontFamily="@font/merriweather-boldItalic"
-        android:textStyle="bold|italic"
+        android:fontFamily="@font/merriweatherbolditalic"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="24dp"/>
+        android:paddingBottom="24dp"
+        android:id="@+id/change"
+        />
 </RelativeLayout>
 
+</ScrollView>
