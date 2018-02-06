@@ -14,20 +14,20 @@
         >
 
         <FrameLayout
+            android:id="@+id/frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/frame"
-        android:paddingTop="25dp"
-        android:paddingBottom="25dp"
         android:layout_alignParentTop="true"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
         >
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#0288BC"
         android:layout_gravity="center_vertical"
+        android:background="#0288BC"
         />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -35,8 +35,8 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_gravity="center"
-            android:src="@drawable/shadow"
             android:alpha="0.5"
+            android:src="@drawable/shadow"
             />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -62,21 +62,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/office"
-        android:layout_toLeftOf="@+id/office"
-        android:layout_toStartOf="@+id/office"
-        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@id/frame"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toLeftOf="@+id/office"
+        android:layout_toStartOf="@+id/office"
         android:fontFamily="@font/merriweatherlight"
-        android:textStyle="bold"
-        android:textSize="16sp"
+        android:text="@string/udacity_info"
         android:textAlignment="center"
-        android:text="@string/udacity_info" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
         <ImageView
         android:id="@+id/wave"
@@ -94,23 +94,27 @@
         android:layout_above="@+id/wave"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp"
+        android:autoLink="web"
         android:fontFamily="@font/merriweatherbold"
+        android:gravity="center"
+        android:linksClickable="true"
         android:text="@string/more"
         android:textColor="#0288BC"
         android:textSize="24sp"
         />
 
+
     <TextView
+        android:id="@+id/change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/slogan"
-        android:fontFamily="@font/merriweatherbolditalic"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/merriweatherbolditalic"
         android:paddingBottom="24dp"
-        android:id="@+id/change"
+        android:text="@string/slogan"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         />
 </RelativeLayout>
 

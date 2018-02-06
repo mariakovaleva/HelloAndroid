@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="udacity_info">\nUdacity \n\n2465 Latham St\n\nMountain View\nCA 94043\n\n650-555-5555</string>
+    <string name="more"><a href="https://www.udacity.com/" target="_top">Find out more now\nwww.udacity.com</a></string>
+    <string name="slogan">Drive the change</string>
+</resources>
